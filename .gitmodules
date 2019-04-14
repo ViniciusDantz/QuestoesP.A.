@@ -1,0 +1,18 @@
+[submodule "Quest-o1"]
+	path = Quest-o1
+	url = https://github.com/ViniciusDantz/Quest-o1.git
+[submodule "Quest-o2"]
+	path = Quest-o2
+	url = https://github.com/ViniciusDantz/Quest-o2.git
+[submodule "Quest-o3"]
+	path = Quest-o3
+	url = https://github.com/ViniciusDantz/Quest-o3.git
+[submodule "Quest-o4"]
+	path = Quest-o4
+	url = https://github.com/ViniciusDantz/Quest-o4.git
+[submodule "Quest-o5"]
+	path = Quest-o5
+	url = https://github.com/ViniciusDantz/Quest-o5.git
+[submodule "Quest-o6"]
+	path = Quest-o6
+	url = https://github.com/ViniciusDantz/Quest-o6.git
