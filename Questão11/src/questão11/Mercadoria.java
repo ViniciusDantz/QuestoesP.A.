@@ -38,7 +38,7 @@ public class Mercadoria {
         qtdEstoque = qtdEstoque - qtdItens;
         desconto = desconto / 100;
         valor = valor * qtdItens;
-        valor = valor - (valor / desconto);
+        valor = valor - (valor * desconto);
         return valor;
     }
 }
