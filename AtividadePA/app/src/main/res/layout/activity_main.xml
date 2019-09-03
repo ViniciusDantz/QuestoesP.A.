@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#ff8659"
+        android:id="@+id/div1">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Descrição: "
+            android:layout_centerVertical="true"
+            android:id="@+id/descr"
+            android:textColor="#000"
+            android:textSize="18dp"
+            android:layout_marginLeft="16dp"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/descr"
+            android:textSize="18dp"
+            android:textColor="#000"
+            android:id="@+id/edtTxt1"
+            android:inputType="textShortMessage"
+            android:layout_marginRight="16dp"
+            android:layout_centerVertical="true"
+            android:hint="Descreva o produto aqui"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#aaffff"
+        android:id="@+id/div2"
+        android:layout_below="@id/div1">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quantidade: "
+            android:id="@+id/quant"
+            android:textColor="#000"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:textSize="18dp"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/quant"
+            android:textSize="18dp"
+            android:inputType="number"
+            android:textColor="#000"
+            android:id="@+id/edtTxt2"
+            android:layout_marginRight="16dp"
+            android:layout_centerVertical="true"
+            android:hint="Quantidade de produto(s)"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#bb86ff"
+        android:id="@+id/div3"
+        android:layout_below="@id/div2">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Valor Unitário: "
+            android:textColor="#000"
+            android:id="@+id/valUni"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:textSize="18dp"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:layout_toRightOf="@id/valUni"
+            android:textSize="18dp"
+            android:layout_marginTop="38dp"
+            android:layout_centerVertical="true"
+            android:inputType="numberDecimal"
+            android:textColor="#000"
+            android:id="@+id/edtTxt3"
+            android:hint="Valor de cada produto"
+            />
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/div3"
+        android:layout_alignParentRight="true"
+        android:background="#0088ff"
+        android:textSize="17dp"
+        android:id="@+id/butao"
+        android:text="Finalizar compra"
+        android:layout_margin="6dp"
+        />
+    <TextView
+        android:layout_width="330dp"
+        android:layout_height="150dp"
+        android:textColor="@color/colorAccent"
+        android:layout_below="@id/butao"
+        android:gravity="center"
+        android:textSize="17dp"
+        android:layout_marginTop="20dp"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"
+        android:id="@+id/txtAlert"
+        android:text="Dados preenchidos incorretamente, verifique se os números são diferentes
+de 0, se o produto é descrito com coerência ou todos os dados estão preenchidos."/>
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtAlert"
+        android:layout_centerInParent="true"
+        android:background="@color/colorAccent"
+        android:textSize="17dp"
+        android:visibility="invisible"
+        android:id="@+id/butao3"
+        android:text="Ok"
+        android:layout_margin="6dp"
+        />
+
+</RelativeLayout>
