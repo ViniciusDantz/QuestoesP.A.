@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">AppLogCat</string>
+    <array name="lista">
+        <item>Rock</item>
+        <item>Rap</item>
+        <item>Samba</item>
+        <item>MPB</item>
+        <item>Trap</item>
+        <item>Pop</item>
+        <item>Pagode</item>
+        <item>Funk</item>
+        <item>Reggae</item>
+        <item>Eletronica</item>
+        <item>Heavy</item>
+    </array>
 </resources>
