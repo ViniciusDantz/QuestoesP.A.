@@ -32,11 +32,13 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     public void onClick(View view) {
-        if(edttxt1.equals("senai") == false || edttxt2.equals("senai") == false){
+        String user = edttxt1.getText().toString();
+        String senha = edttxt2.getText().toString();
+        if(user.equals("senai") == false || senha.equals("senai") == false){
             txtview.setVisibility(View.VISIBLE);
         }else{
             Intent i = new Intent(this, Cadastro.class);
-            i.putExtra("user", edttxt1.getText());
+            i.putExtra("user", edttxt1.getText().toString());
             startActivity(i);
         }
     }

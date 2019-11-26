@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Cadastro extends AppCompatActivity implements View.OnClickListener {
 
@@ -31,10 +32,11 @@ public class Cadastro extends AppCompatActivity implements View.OnClickListener 
         if(getIntent().hasExtra("user")){
             txtUser.setText("Bem vindo "+ getIntent().getExtras().getString("user")+ "!");
         }
+        edttxt1.addTextChangedListener(MaskEditUtil.mask(edttxt1, MaskEditUtil.FORMAT_CPF));
     }
 
     @Override
     public void onClick(View view) {
-
+        Toast.makeText(this, "Cadastrado com SUCESS", Toast.LENGTH_LONG).show();
     }
 }

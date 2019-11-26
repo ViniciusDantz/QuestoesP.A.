@@ -24,6 +24,7 @@
             android:hint="Nome de Usuário"
             android:layout_height="wrap_content"
             android:id="@+id/usuarioedt"
+            android:inputType="textPersonName"
             android:layout_toRightOf="@id/usuario"/>
     </RelativeLayout>
 
@@ -42,6 +43,7 @@
         <EditText
             android:layout_width="250dp"
             android:hint="Senha do Usuário"
+            android:inputType="textPassword"
             android:layout_height="wrap_content"
             android:id="@+id/senhaedt"
             android:layout_toRightOf="@id/senha"/>
