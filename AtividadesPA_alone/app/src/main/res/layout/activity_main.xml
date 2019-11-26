@@ -133,4 +133,30 @@ de 0, se o produto é descrito com coerência ou todos os dados estão preenchid
         android:layout_margin="6dp"
         />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:text="Recycle View"
+        android:layout_toLeftOf="@id/tolistview"
+        android:background="#f44f55"
+        android:textColor="#fff"
+        android:id="@+id/botao2"
+        android:textSize="18dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="ListView - SQLite"
+        android:background="@color/colorPrimary"
+        android:layout_margin="20dp"
+        android:textColor="#fff"
+        android:textSize="17dp"
+        android:padding="10dp"
+        android:id="@+id/tolistview"/>
+
 </RelativeLayout>

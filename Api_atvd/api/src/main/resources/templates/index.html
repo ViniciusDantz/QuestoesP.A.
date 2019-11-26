@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html style="background: gainsboro;">
+    <head>
+        <title>Android Individual-API</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+    <body>
+        <div style='margin: 50px;'>
+            <h1>Bem vindo ao Android Individual-API</h1>
+            <h2>Rotas da API (http://localhost:8080):</h2>
+
+            <p>/                 - Request - Página inicial</p>
+
+            <p>Usuário</p>
+            <ul>
+                <li>/login                - POST - Envia nome e senha e recebe usuário ou null</li>
+                <li>/usuarios            - GET -    Usuários do sistema</li>
+                <li>/usuario            - POST -    adicionar usuário</li>
+                <li>/usuario/{id}            - GET -    Usuário por id</li>
+                <li>/usuario/{id}/nome/{nome}    - PUT -     Atualiza nome</li>
+                <li>/usuario/{id}/email/{email}    - PUT -     Atualiza email</li>
+                <li>/usuario/{id}/senha/{senha}- PUT -     Atualiza senha</li>
+                <li>/usuario/{id} - DELETE - Apaga o usuário por id</li>
+            </ul>
+        </div>
+    </body>
+</html>
