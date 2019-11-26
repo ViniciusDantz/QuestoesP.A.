@@ -15,7 +15,7 @@ import org.json.JSONException;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class ListViewUsers extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemSelectedListener {
+public class ListViewUsers extends AppCompatActivity implements View.OnClickListener{
 
     ListView listViewUsers;
     Button cadastrar;
@@ -39,9 +39,9 @@ public class ListViewUsers extends AppCompatActivity implements View.OnClickList
 
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, nomes);
         listViewUsers.setAdapter(adapter);
-        listViewUsers.setOnItemSelectedListener(this);
 
         cadastrar.setOnClickListener(this);
+        voltar.setOnClickListener(this);
         /*try {
             ConnectionAPI.readJsonFromUrl("/usuarios");
         } catch (IOException e) {
@@ -58,15 +58,9 @@ public class ListViewUsers extends AppCompatActivity implements View.OnClickList
             i = new Intent(this, Cadastro.class);
             startActivity(i);
         }
-    }
-
-    @Override
-    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-
-    }
-
-    @Override
-    public void onNothingSelected(AdapterView<?> adapterView) {
-
+        if(view.getId() == voltar.getId()){
+            i = new Intent(this, MainActivity.class);
+            startActivity(i);
+        }
     }
 }

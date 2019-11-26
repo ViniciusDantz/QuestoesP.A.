@@ -5,13 +5,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class UsuarioAdapter extends RecyclerView.Adapter {
+public class UsuarioAdapter extends RecyclerView.Adapter<UsuarioAdapter.UsuarioViewHolder> {
     private Context context;
     private ArrayList<Usuario> usuarios;
     private UsuarioDAO userDAO;
@@ -23,15 +24,15 @@ public class UsuarioAdapter extends RecyclerView.Adapter {
     }
 
     public static class UsuarioViewHolder extends RecyclerView.ViewHolder {
-        public EditText nome;
-        public EditText email;
-        public EditText senha;
+        public TextView nome;
+        public TextView email;
+        public TextView senha;
 
         public UsuarioViewHolder(View view) {
             super(view);
-            this.nome = view.findViewById(R.id.nome);
-            this.email = view.findViewById(R.id.email);
-            this.senha = view.findViewById(R.id.senha);
+            this.nome = view.findViewById(R.id.nometxt);
+            this.email = view.findViewById(R.id.emailtxt);
+            this.senha = view.findViewById(R.id.senhatxt);
         }
     }
 
@@ -41,7 +42,7 @@ public class UsuarioAdapter extends RecyclerView.Adapter {
 
     @NonNull
     @Override
-    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
+    public UsuarioViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         //Inflando o layout_item dentro de um objeto View
         View view = LayoutInflater.from(context).inflate(R.layout.fragment_usuario, viewGroup, false);
         //Acessando a nossa classe do ViewHolder e atribuindo o objeto View ao seu construtor
@@ -51,13 +52,10 @@ public class UsuarioAdapter extends RecyclerView.Adapter {
     }
 
     @Override
-    public void onBindViewHolder(RecyclerView.ViewHolder viewHolder, final int i) {
-
-        UsuarioViewHolder exemploVH  = (UsuarioViewHolder) viewHolder;
-
-        exemploVH.nome.setText(usuarios.get(i).getUser());
-        exemploVH.email.setText(usuarios.get(i).getEmail());
-        exemploVH.senha.setText(usuarios.get(i).getSenha());
+    public void onBindViewHolder(@NonNull UsuarioViewHolder holder, int i) {
+        holder.nome.setText("Nome: "+usuarios.get(i).getUser());
+        holder.email.setText("Email: "+usuarios.get(i).getEmail());
+        holder.senha.setText("Senha: "+usuarios.get(i).getSenha());
     }
 
     @Override
