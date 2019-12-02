@@ -34,7 +34,7 @@ public class ListViewUsers extends AppCompatActivity implements View.OnClickList
 
         ArrayList<String> nomes = new ArrayList<>();
         for (Usuario user: user.buscaUsuarios()) {
-            nomes.add(user.getUser());
+            nomes.add(user.getNome());
         }
 
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, nomes);
@@ -42,13 +42,6 @@ public class ListViewUsers extends AppCompatActivity implements View.OnClickList
 
         cadastrar.setOnClickListener(this);
         voltar.setOnClickListener(this);
-        /*try {
-            ConnectionAPI.readJsonFromUrl("/usuarios");
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }*/
     }
 
     @Override

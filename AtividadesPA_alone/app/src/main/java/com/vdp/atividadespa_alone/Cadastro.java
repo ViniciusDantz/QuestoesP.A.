@@ -35,7 +35,7 @@ public class Cadastro extends AppCompatActivity implements View.OnClickListener{
         Intent i;
         if(cadastrar.getId() == view.getId()){
             Usuario usuario = new Usuario();
-            usuario.setUser(edt1.getText().toString());
+            usuario.setNome(edt1.getText().toString());
             usuario.setEmail(edt2.getText().toString());
             usuario.setSenha(edt3.getText().toString());
 

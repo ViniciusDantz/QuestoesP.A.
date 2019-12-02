@@ -15,12 +15,10 @@ import java.util.ArrayList;
 public class UsuarioAdapter extends RecyclerView.Adapter<UsuarioAdapter.UsuarioViewHolder> {
     private Context context;
     private ArrayList<Usuario> usuarios;
-    private UsuarioDAO userDAO;
 
-    public UsuarioAdapter(Context context) {
+    public UsuarioAdapter(Context context, ArrayList<Usuario> usuarios) {
         this.context = context;
-        userDAO = new UsuarioDAO(context);
-        this.usuarios = userDAO.buscaUsuarios();
+        this.usuarios = usuarios;
     }
 
     public static class UsuarioViewHolder extends RecyclerView.ViewHolder {
@@ -53,7 +51,7 @@ public class UsuarioAdapter extends RecyclerView.Adapter<UsuarioAdapter.UsuarioV
 
     @Override
     public void onBindViewHolder(@NonNull UsuarioViewHolder holder, int i) {
-        holder.nome.setText("Nome: "+usuarios.get(i).getUser());
+        holder.nome.setText("Nome: "+usuarios.get(i).getNome());
         holder.email.setText("Email: "+usuarios.get(i).getEmail());
         holder.senha.setText("Senha: "+usuarios.get(i).getSenha());
     }

@@ -7,7 +7,7 @@ import java.io.Serializable;
 
 public class Usuario implements Parcelable, Serializable {
     public int id;
-    public String user;
+    public String nome;
     public String senha;
 
     public String email;
@@ -18,7 +18,7 @@ public class Usuario implements Parcelable, Serializable {
     }
 
     protected Usuario(Parcel in) {
-        user = in.readString();
+        nome = in.readString();
         senha = in.readString();
     }
 
@@ -30,12 +30,12 @@ public class Usuario implements Parcelable, Serializable {
         this.id = id;
     }
 
-    public String getUser() {
-        return user;
+    public String getNome() {
+        return nome;
     }
 
-    public void setUser(String user) {
-        this.user = user;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public String getSenha() {
@@ -78,7 +78,7 @@ public class Usuario implements Parcelable, Serializable {
 
     @Override
     public void writeToParcel(Parcel parcel, int i) {
-        parcel.writeString(user);
+        parcel.writeString(nome);
         parcel.writeString(senha);
     }
 }

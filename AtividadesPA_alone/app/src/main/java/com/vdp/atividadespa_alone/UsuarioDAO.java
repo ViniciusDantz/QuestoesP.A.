@@ -19,7 +19,7 @@ public class UsuarioDAO {
 
     public void cadastrar(Usuario usuario){
         ContentValues values = new ContentValues();
-        values.put("user", usuario.getUser());
+        values.put("nome", usuario.getNome());
         values.put("senha", usuario.getSenha());
         values.put("email", usuario.getEmail());
 
@@ -29,14 +29,14 @@ public class UsuarioDAO {
 
     public ArrayList<Usuario> buscaUsuarios(){
         ArrayList<Usuario> lista = new ArrayList<>();
-        String[] colunas = new String[]{"id", "user", "senha", "email"};
+        String[] colunas = new String[]{"id", "nome", "senha", "email"};
         Cursor cursor = banco.query("usuario", colunas, null, null, null, null, "user ASC");
         if(cursor.getCount()>0){
             cursor.moveToFirst();
             do{
                 Usuario user = new Usuario();
                 user.setId(cursor.getInt(0));
-                user.setUser(cursor.getString(1));
+                user.setNome(cursor.getString(1));
                 user.setSenha(cursor.getString(2));
                 user.setEmail(cursor.getString(3));
 

@@ -15,7 +15,7 @@ public class BD extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
 
         db.execSQL("create table usuario(id integer primary key autoincrement," +
-                "user varchar (20), senha varchar (45), email varchar (45))");
+                "nome varchar (20), senha varchar (45), email varchar (45))");
 
     }
 
