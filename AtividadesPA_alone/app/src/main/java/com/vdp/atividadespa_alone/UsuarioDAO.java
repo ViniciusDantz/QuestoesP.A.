@@ -30,7 +30,7 @@ public class UsuarioDAO {
     public ArrayList<Usuario> buscaUsuarios(){
         ArrayList<Usuario> lista = new ArrayList<>();
         String[] colunas = new String[]{"id", "nome", "senha", "email"};
-        Cursor cursor = banco.query("usuario", colunas, null, null, null, null, "user ASC");
+        Cursor cursor = banco.query("usuario", colunas, null, null, null, null, "nome ASC");
         if(cursor.getCount()>0){
             cursor.moveToFirst();
             do{

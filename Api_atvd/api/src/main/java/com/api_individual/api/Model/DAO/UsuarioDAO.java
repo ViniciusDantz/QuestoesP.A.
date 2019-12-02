@@ -184,7 +184,7 @@ public class UsuarioDAO {
         ArrayList<Usuario> usuarios = new ArrayList<>();
         Usuario user;
         try {
-            BD.ps = BD.conn.prepareStatement("select id, nome, email from Usuario");
+            BD.ps = BD.conn.prepareStatement("select * from Usuario");
             BD.result = BD.ps.executeQuery();
             if(BD.result.next()){
                 do{
@@ -192,6 +192,7 @@ public class UsuarioDAO {
                     user.setId(Integer.parseInt(BD.result.getString("id")));
                     user.setNome(BD.result.getString("nome"));
                     user.setEmail(BD.result.getString("email"));
+                    user.setSenha(BD.result.getString("senha"));
                     usuarios.add(user);
                 } while (BD.result.next());
             }
